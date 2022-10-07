@@ -1,6 +1,7 @@
 {
-  "name": "react-weather-app-component-testing",
+  "name": "demo-playwright-component-testing",
   "version": "0.1.0",
+  "homepage": "http://cuongld2.github.io/demo-playwright-component-testing",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",

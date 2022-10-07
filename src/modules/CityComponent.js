@@ -44,7 +44,7 @@ export const CityComponent = (props) => {
   const { updateCity, fetchWeather } = props;
   return (
     <>
-      <WelcomeWeatherLogo src={"/react-weather-app/icons/sunny-beautiful.svg"} />
+      <WelcomeWeatherLogo src={"/demo-playwright-component-testing/icons/sunny-beautiful.svg"} />
       <ChooseCityLabel>The city you want to check weather</ChooseCityLabel>
       <SearchBox onSubmit={fetchWeather}>
         <input
