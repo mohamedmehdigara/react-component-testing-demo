@@ -78,13 +78,15 @@ const InfoLabel = styled.span`
 export const WeatherInfoComponent = (props) => {
     const {name, value} = props;
     return (
-        <InfoContainer>
+      <>
+      <InfoContainer>
             <InfoIcon src={WeatherInfoIcons[name]}/>
             <InfoLabel>
                 {value}
                 <span>{name}</span>
             </InfoLabel>
         </InfoContainer>
+      </>
     );
 };
 export const WeatherComponent = (props) => {
