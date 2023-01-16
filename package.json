@@ -17,12 +17,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "test-ct": "playwright test src/tests/CityComponent.spec.jsx src/tests/WeatherInfoComponent.spec.jsx -c playwright-ct.config.js",
-    "e2e-test": "playwright test src/tests/e2e/"
+    "test-ct": "playwright test -c playwright-ct.config.js"
   },
   "eslintConfig": {
     "extends": [
