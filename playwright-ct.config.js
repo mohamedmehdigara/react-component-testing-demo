@@ -1,18 +1,17 @@
 // @ts-check
-const { devices } = require('@playwright/experimental-ct-react');
+const { defineConfig, devices } = require('@playwright/experimental-ct-react');
 
 /**
  * @see https://playwright.dev/docs/test-configuration
- * @type {import('@playwright/experimental-ct-react').PlaywrightTestConfig}
  */
-const config = {
+module.exports = defineConfig({
   testDir: './',
   /* The base directory, relative to the config file, for snapshot files created with toMatchSnapshot and toHaveScreenshot. */
   snapshotDir: './__snapshots__',
   /* Maximum time one test can run for. */
   timeout: 10 * 1000,
   /* Run tests in files in parallel */
-  fullyParallel: false,
+  fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
@@ -34,23 +33,15 @@ const config = {
   projects: [
     {
       name: 'chromium',
-      use: {
-        ...devices['Desktop Chrome'],
-      },
+      use: { ...devices['Desktop Chrome'] },
     },
     {
       name: 'firefox',
-      use: {
-        ...devices['Desktop Firefox'],
-      },
+      use: { ...devices['Desktop Firefox'] },
     },
     {
       name: 'webkit',
-      use: {
-        ...devices['Desktop Safari'],
-      },
+      use: { ...devices['Desktop Safari'] },
     },
   ],
-};
-
-module.exports = config;
+});
